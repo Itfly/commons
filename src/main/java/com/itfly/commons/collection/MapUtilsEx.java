@@ -1,13 +1,10 @@
-package com.itfly.commons.map;
+package com.itfly.commons.collection;
 
 import org.apache.commons.collections.MapUtils;
-import org.apache.commons.collections.map.HashedMap;
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.collections.map.UnmodifiableMap;
 
 import java.util.*;
-import java.util.function.Supplier;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -71,6 +68,7 @@ public class MapUtilsEx extends MapUtils {
                         LinkedHashMap::new));
     }
 
+    // TODO : support other collection
     public static <K, V>
     Map<V, List<K>> reverse(Map<K, V> map) {
         if (isEmpty(map)) {
